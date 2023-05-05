@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViajArg</title>
+    <link rel="icon" href="img/logoico2.ico">
+    <!--Fuentes de google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&family=Suwannaphum&display=swap"
+        rel="stylesheet">
+    <!--Fuente de Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <!----> <img src="img/logo.png" alt="Logo de la marca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li> <a class="Active" href="index.html">Menú <br>principal </a></li>
+                <li> <a href="">Región<br /> Noroeste </a></li>
+                <li> <a href="">Región<br> Nordeste </a></li>
+                <li> <a href="">Región <br>Pampeana </a></li>
+                <li> <a href="">Región de<br> Cuyo </a></li>
+                <li> <a href="patagonia.html">Región<br> Patagónica </a></li>
+                <li> <a href="contacto.html">Contacto </a></li>
+            </ul>
+        </nav>
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div id="mobile-menu" class="overlay">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+
+            <div class="overlay-content">
+                <a class="Active" href="index.html">Menú principal </a>
+                <a href="">Región Noroeste </a>
+                <a href="">Región Nordeste </a>
+                <a href="">Región Pampeana </a>
+                <a href="patagonia.html">Región Patagónica </a>
+                <a href="contacto.html">Contacto </a>
+            </div>
+        </div>
+    </header>
+    <div class="formulario">
+        <form action="" id="form">
+            <div class="form">
+                <h1 class="titulo">Contacto</h1>
+                <div class="grupo">
+                    <input type="text" id="name" required><span class="barra"></span>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="grupo">
+                    <input type="text" id="name" required><span class="barra"></span>
+                    <label for="">Apellido</label>
+                </div>
+                <div class="grupo">
+                    <input type="email" id="name" required><span class="barra"></span>
+                    <label for="">Mail</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="name" required><span class="barra"></span>
+                    <label for="">Telefono</label>
+                </div>
+                <button class="btn-enviar" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="JS/nav.js"></script>
+
+</html>

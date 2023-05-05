@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViajArg</title>
+    <link rel="icon" href="img/logoico2.ico">
+    <!--Fuentes de google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&family=Suwannaphum&display=swap"
+        rel="stylesheet">
+    <!--Fuente de Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <!----> <img src="img/logo.png" alt="Logo de la marca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li> <a class="Active" href="#">Menú <br>principal </a></li>
+                <li> <a href="">Región<br /> Noroeste </a></li>
+                <li> <a href="">Región<br> Nordeste </a></li>
+                <li> <a href="">Región <br>Pampeana </a></li>
+                <li> <a href="">Región de<br> Cuyo </a></li>
+                <li> <a href="patagonia.html">Región<br> Patagónica </a></li>
+                <li> <a href="contacto.html">Contacto </a></li>
+            </ul>
+        </nav>
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div id="mobile-menu" class="overlay">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+
+            <div class="overlay-content">
+                <a class="Active" href="#">Menú principal </a>
+                <a href="">Región Noroeste </a>
+                <a href="">Región Nordeste </a>
+                <a href="">Región Pampeana </a>
+                <a href="">Región de Cuyo </a>
+                <a href="patagonia.html">Región Patagónica </a>
+                <a href="contacto.html">Contacto </a>
+            </div>
+        </div>
+
+    </header>
+    <!-- Este es el Banner -->
+    <section>
+        <div class="row row-banner">
+            <p class="text-banner">
+                Los invitamos a descubrir diversos paisajes de nuestra amada República Argentina.<br>
+                Podrán encontrar lugares dónde vivir variadas experiencias gracias a los distintos tipos de climas y
+                relieves que ofrece nuestro país. <br>
+                Esperamos disfruten este pequeño recorrido virtual y puedan encontar su lugar favorito.
+            </p>
+        </div>
+    </section>
+    <section>
+        <!-- Este es el Contenedor con las 3 tarjetas de Arriba -->
+        <div class="row row-cards-up">
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <img class="card-img" src="img/Noroeste.jpg" alt="">
+                </div>
+                <div class="card-footer">
+
+                    <form class="btn-action-form" action="" method="post">
+                        <p class="card-text-footer">En la región NOA se puede encontrar desde
+                            cordilleras a extensas llanuras y zonas extremadamente desérticas a otras completamente
+                            húmedas. </p>
+                        <button type="submit" class="btn-card">+ Info</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <img class="card-img" src="img/lado-argentino-cataratas-iguazu.jpg" alt="">
+                </div>
+                <div class="card-footer">
+
+                    <form class="btn-action-form" action="" method="post">
+                        <p class="card-text-footer">En la región NEA, el relieve es predominantemente plano, excepto en
+                            la meseta misionera, que es
+                            ondulada. El clima es cálido y las precipitaciones son muy abundantes.</p>
+                        <button type="submit" class="btn-card">+ Info</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <img class="card-img" src="img/region_pampeana.jpeg" alt="">
+                </div>
+                <div class="card-footer">
+
+                    <form class="btn-action-form" action="" method="post">
+                        <p class="card-text-footer">En la región pampeana, predomina la llanura exceptuando por las
+                            sierras de Tandilia y Ventuania.
+                            El clima puede ser templado o semiárido.
+                        </p>
+                        <button type="submit" class="btn-card">+ Info</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Este es el Contenedor con las 2 tarjetas de Abajo -->
+        <div class="row row-cards-down">
+            <!-- Tarjeta 4 -->
+            <div class="card">
+
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <img class="card-img" src="img/Cuyo.jpg" alt="">
+                </div>
+
+                <div class="card-footer">
+                    <form class="btn-action-form" action="" method="post">
+                        <p class="card-text-footer">En la región cuyana, predomina un relieve montañoso de escasa
+                            vegetación, con características
+                            climáticas desérticas</p>
+                        <button type="submit" class="btn-card">+ Info</button>
+                    </form>
+                </div>
+
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="card">
+
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <img class="card-img" src="img/region_patagonica.jpg" alt="">
+                </div>
+                <div class="card-footer">
+
+                    <form class="btn-action-form" action="patagonia.html" method="post">
+                        <p class="card-text-footer">La Patagonia es una región que abarca el extenso extremo austral
+                            de Sudamérica.
+                            El sur tiene un clima sub-ártico, que se caracteriza por fuertes vientos y lluvias no
+                            muy abundantes.
+                        </p>
+                        <button type="submit" class="btn-card">+ Info</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- El Footer donde debe ir el Formulario de Contacto -->
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </section>
+</body>
+
+<script type="text/javascript" src="JS/nav.js"></script>
+
+</html>

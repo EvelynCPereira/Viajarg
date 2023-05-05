@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViajArg</title>
+    <link rel="icon" href="Img/logoico2.ico">
+    <!--Fuentes de google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&family=Suwannaphum&display=swap"
+        rel="stylesheet">
+    <!--Fuente de Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style_pat.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+<!---->            <img src="img/logo.png" alt="Logo de la marca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li> <a class="Active" href="index.html">Menú <br>principal </a></li>
+                <li>  <a href="">Región<br/> Noroeste </a></li>
+                <li>  <a href="">Región<br> Nordeste </a></li>
+                <li>  <a href="">Región <br>Pampeana </a></li>
+                <li>   <a href="">Región de<br> Cuyo </a></li>
+                <li>    <a href="patagonia.html">Región<br> Patagónica </a></li>
+                <li> <a href="contacto.html">Contacto </a></li>
+            </ul>            
+        </nav>
+
+<!---->        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+<!---->        <div id="mobile-menu" class="overlay">
+<!---->            <a onclick="closeNav()" href="" class="close" >&times;</a>
+<!---->            <div class="overlay-content">
+<!---->                <a class="Active" href="index.html">Menú principal </a>
+                            <a href="">Región Noroeste </a>
+                            <a href="">Región Nordeste </a>
+                            <a href="">Región Pampeana </a>
+                            <a href="">Región de Cuyo </a>
+                            <a href="patagonia.html">Región Patagónica </a>
+                            <a href="contacto.html">Contacto </a>
+<!---->            </div>
+<!---->        </div>
+
+    </header>
+<!--  Carrousel de imágenes  -->
+
+    <div class="carrusel">
+        <div id="imagen_carrusel">
+            <button id="retroceder">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button id="avanzar">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+        </div>
+    </div>
+
+<!-- Comienza el texto -->
+<section>
+    <h1 id="titulo_region">Patagonia</h1>
+    <p>
+        La mítica Patagonia atesora escenarios naturales increíbles.  Se ubica en el sur del territorio argentino y la conforman las provincias de La Pampa, Neuquén, Río Negro, La Pampa, Chubut, Santa Cruz y Tierra del Fuego, Antártida e Islas del Atlántico Sur.
+        <br>
+        Entre sus bellezas paisajísticas y grandes atractivos se destacan cinco sitios del Patrimonio Mundial (UNESCO): el Parque Nacional Los Glaciares, La Cueva de las Manos, el Parque Nacional Los Alerces y Península Valdés.
+        <br>
+        Por un lado, el cordón de la Cordillera de los Andes, se impone de norte a sur como uno de sus límites naturales y abre escenarios impactantes. Cumbres de volcanes con géiseres y aguas termales; montañas de donde descienden enormes glaciares, lagos y ríos.  Encantadores valles y aldeas de montaña rodeadas de bosques autóctonos milenarios, o extensos campos de estepa.
+        <br>
+        Patagonia también sorprende con su biodiversidad y su fauna silvestre no menos increíble. Desde maras, ñandúes, guanacos y el ciervo colorado hasta el cóndor sobrevolando desde los andes a las sierras junto al mar.  También es hábitat de un rico mundo marino, donde numerosas especies forman colonias de lobos y elefantes marinos, pingüinos magallánicos, delfines, toninas, y otras que arriban por temporada donde se destaca la Ballena Franca Austral (Monumento Natural).
+        <br>
+        Su gastronomía, te ofrece platos y sabores tan bien definidos que merecen una mención. Entre ellos, regionales a base del cordero patagónico, o carnes típicas de ciervo, chivo, truchas y otras delicias que pueden combinarse a la perfección con vinos de origen patagónico. Imperdibles son las picaditas de ahumados con cervezas artesanales y todos una tentación para los chocolates y dulces.
+    </p>
+<!-- Contenedor del iFrame del mapa  -->
+        <div class="contenedor_mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11381421.04582349!2d-79.82087532794095!3d-45.85795853670156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdefadac12340ab3%3A0xf5803d880367e318!2sPatagonia!5e0!3m2!1ses-419!2sar!4v1682383902900!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+<!--Texto debajo del iFrame-->
+        <p>Formada por las provincias de La Pampa, Neuquén, Río Negro, Chubut, Santa Cruz y Tierra del Fuego, con una superficie de 930.731 Km2 y una población total de 2.037.545 personas, cada rincón de la Patagonia Argentina ofrece una amplia gama de posibilidades para el relax, la recreación y la aventura, en un marco donde la exuberante naturaleza es la gran protagonista.</p>
+
+<!--Tarjetas de los lugares Populares-->
+
+    <article class="articulo">
+        <p id="populares">Lugares Populares</p>
+        <div class="card"> 
+            <div class="card-content">
+                <span>Neuquén</span>                <!--Provincia-->
+                <h2>San Martin de los Andes</h2>            <!--Lugar-->
+                <p>                                             <!--Descripción del lugar-->
+                    San Martín es un destino muy cautivador por muchas razones, como disfrutar de un chocolate caliente en el corazón de la ciudad, relajarse tranquilamente frente al Lago Lácar o tomar un té mientras se contempla la ciudad desde lo alto.
+                </p>
+            </div>
+            <img src="img/Andes_card.jpg" alt="Imagen de la tarjeta">
+        </div>
+
+        <div class="card">  
+            <div class="card-content">
+                <span>Rio Negro</span>
+                <h2>San Carlos de Bariloche</h2>
+                <p>
+                Bariloche es uno de los destinos turísticos más importantes de Argentina y el principal centro turístico de la provincia de Río Negro.
+                <br>
+                Con el majestuoso lago Nahuel Huapi a sus pies, esta ciudad es un sinónimo de turismo y un lugar imperdible para visitar.
+                </p>
+            </div>
+            <img src="img/Bariloche_card.jpg" alt="Imagen de la tarjeta">
+        </div>
+
+        <div class="card">  
+            <div class="card-content">
+                <span>Santa Cruz</span>
+                <h2>Glaciar Perito Moreno</h2>
+                <p>
+                Este glaciar es la imagen más representativa no solo del parque, sino también de la ciudad de El Calafate.
+                <br>
+                Lo que hace que este glaciar sea aún más especial es que es el más accesible de todos los glaciares para ver. Se puede caminar hacia él a través de un sistema de pasarelas que permiten una vista frontal completa y única.
+                </p>
+            </div>
+            <img src="img/Peritomoreno_card.JPG" alt="Imagen de la tarjeta">
+        </div>
+
+        <div class="card">  
+            <div class="card-content">
+                <span>Chubut</span>
+                <h2>Puerto Madryn</h2>
+                <p>Bautizada como la Capital Nacional del Buceo y las Actividades Subacuáticas, esta ciudad chubutense es mundialmente conocida por el avistaje de la ballena franca austral.
+                <br>
+                Ideal para visitar en familia, Puerto Madryn es una de las ciudades que más creció en la Patagonia y, a su vez, se transformó en un lugar de excelencia turística.</p>
+            </div>
+            <img src="img/Puertomadryn_card.jpg" alt="Imagen de la tarjeta">
+        </div>
+
+    </article>
+
+</section>
+</body>
+<script type="text/javascript" src="JS/script.js  "></script>
+    <script src="https://kit.fontawesome.com/f3d9777f93.js" crossorigin="anonymous"></script>
+</html>

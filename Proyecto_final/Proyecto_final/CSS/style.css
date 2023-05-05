@@ -1,0 +1,475 @@
+/*Estilos para el menú*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+body {
+    background-color: #eeeee6;
+    min-width: 400px;
+}
+
+.header {
+    background-color: rgba(14, 56, 241, 0.942);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10px;
+   font-size: 0.8rem;
+}
+
+.header .logo {
+    cursor: pointer;
+    margin: auto;
+    width: 70px;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+nav {
+    width: 85%;
+}
+
+.header .nav-links {
+    list-style: none;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+
+.overlay a:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-size: 700;
+    color: #ebecdae4;
+}
+
+.header .nav-links a:hover {
+    color: #ffbc0e;
+}
+
+.menu {
+    display: none;
+}
+
+.header .btn button,
+
+.header .menu button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover {
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+/* --------------------- CONTACTO -------------------- */
+
+.formulario{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+.form h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+#form{
+    width: 40vw;
+    padding: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 2px #2980B9;
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+#form .grupo{
+    position: relative;
+    margin: 30px;
+}
+
+input{
+    background: none;
+    color:#009FFF;
+    font-size: 18px;
+    padding: 8px 8px 8px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(17, 50, 97, 0.705);
+}
+
+input:focus{
+    outline: none;
+}
+
+label{
+    font-size: 15px;
+    font-weight: 800;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease ;
+    pointer-events: none;
+}
+
+/* al hacer clik sobre los input se daran estilos a los label , y cuando input sea valido, entonces label */
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, hsl(196, 93%, 70%), hsl(204, 64%, 44%));
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+.btn-enviar{
+    font-family: 'Open Sans';
+    background: linear-gradient(to right, hsl(196, 93%, 70%), hsl(204, 64%, 44%));
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.btn-enviar:active{
+    transform: scale(0.9);
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    .nav-links,
+    .btn {
+        display: none;
+    }
+
+    .menu {
+        display: inherit;
+    }
+}
+
+/*Nav Mobile*/
+
+.header a {
+    text-decoration: none;
+    /*borramos el que teniamos en .header .nav-links a*/
+}
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a {
+    padding: 15px;
+    font-size: 20px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+    color: #ffbc0e;
+}
+
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay a {
+        font-size: 20px;
+    }
+
+    .header .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*Fin de estilos para el menú*/
+/*Estilos para toos los row*/
+.row{
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+}
+
+/*Estilos para el banner*/
+
+.row-banner{
+    margin-bottom: 20px;
+    background-image:url("../img/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 300px;
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Estilos para el Texto que va en el Banner*/
+.text-banner{
+    width: 500px;
+    text-align: justify;
+    margin-right: 70px;
+    color: rgb(69, 68, 68);
+    font-size: 1.8em;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Fin de estilos para el banner*/
+
+/*Estilos Para las 3 Tarjetas de Arriba*/
+.row-cards-up{
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+/*Estilos Para las 2 Tarjetas de Abajo*/
+.row-cards-down{
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+.row-cards-down .card:first-child{
+    margin-left: 16.8%;
+}
+.row-cards-down .card:last-child{
+     margin-right: 16.8%;
+}
+/*Estilos para Cada Tarjeta*/
+.card {
+    width: 30%;
+    height: 350px;
+    text-align: center;
+}
+
+/*Estilos para El Header de la Tarjeta
+    Solo seteo bordes redondeados para Las Esquinas Superior Derecha E Izquierda*/
+.card-header{
+    background-color: rgba(14, 56, 241, 0.942);
+    height: 2%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*Estilos para El Body de la Tarjeta*/
+.card-body{
+    height: 75%;
+    background-color: rgba(14, 56, 241, 0.942);
+}
+
+/*Estilos para la Imagen que va en el Body*/
+.card-img{
+    width: 96%;
+    height: 100%;
+    margin: auto 0;
+    border-radius: 10px;
+}
+
+/*Estilos para El Footer de la Tarjeta
+    Solo seteo bordes redondeados para Las Esquinas Inferior Derecha E Izquierda*/
+.card-footer{
+    background-color: rgba(14, 56, 241, 0.942);
+    height: 23%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*Estilos para el formulario del Botón para centrarlos en el footer*/
+.btn-action-form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+ 
+
+}
+.card-text-footer{
+    text-align: justify;
+    margin: 1px;
+    width: 70%;
+    color: white;
+}
+
+/*Aquí van los Estilos para los Botones*/
+.btn-card{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(248, 248, 252, 0.942);
+    box-shadow: 2px 2px 2px rgb(3, 3, 3);
+    color: white;
+    background-color: rgb(14, 188, 241);
+    margin-left:10px;
+   
+}
+/*Estilo de mouse*/
+.btn-card:hover{
+    background-color: rgba(14, 124, 241, 0.942);
+    cursor: pointer;
+    }
+
+/*Los Estilos del Footer*/
+.footer {
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/*Los media query para pantallas bajo los 850px*/
+@media (max-width: 850px) {
+
+    .text-banner{
+        justify-content: right;
+        color: black;
+    }
+    .row-cards-up{
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+    .card {
+        width: 40%;
+        margin-left: 2.5%;
+        margin-Right: 2.5%;
+        margin-bottom: 20px;
+    }
+    .row-cards-down .card:first-child{
+        width: 40%;
+        margin-left: 2.5%;
+        margin-Right: 2.5%;
+        margin-bottom: 20px;
+    }
+    .row-cards-down .card:last-child{
+        width: 40%;
+        margin-left: 2.5%;
+        margin-Right: 2.5%;
+        margin-bottom: 20px;
+    }
+}
+
+/*Los media query para pantallas bajo los 550px*/
+@media (max-width: 550px) {
+    
+    /*Con Flex-Direction Hago que todos los elementos se ordenen hacia abajo ... en vez de que se ordenen en 
+    linea vertical*/
+    .row-cards-up{
+        flex-direction: column;
+    }
+    .row-cards-down{
+        flex-direction: column;
+    }
+    .card {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-Right: 2.5%;
+        margin-bottom: 10px;
+    }
+    .row-cards-down .card:first-child{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-Right: 2.5%;
+        margin-bottom: 10px;
+    }
+    .row-cards-down .card:last-child{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-Right: 2.5%;
+        margin-bottom: 10px;
+    }
+    .text-banner{
+        margin-left: 4%;
+    }
+}
