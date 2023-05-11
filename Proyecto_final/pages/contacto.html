@@ -53,31 +53,33 @@
             <div class="form">
                 <h1 class="titulo">Contacto</h1>
                 <div class="grupo" id="nombre">
-                    <input type="text" id="nombre" class="input" name="nombre" required><span class="barra"></span>
+                    <input type="text" id="nombre" class="input" name="nombre nombre_input" required><span class="barra"></span>
                     <label for="nombre">Nombre</label>
                     <p  class="text-error"><b>El nombre NO debe contener simbolos, guiones, numeros.</b></p>
                 </div>
                 <div class="grupo" id="apellido">
-                    <input type="text" id="apellido" class="input" name="apellido" required><span class="barra"></span>
+                    <input type="text" id="apellido" class="input apellido_input" name="apellido" required><span class="barra"></span>
                     <label for="apellido">Apellido</label>
                     <p  class="text-error"><b>El apellido NO debe contener simbolos, guiones, numeros.</b></p>
                 </div>
                 <div class="grupo" id="mail">
-                    <input type="email" id="mail" class="input" name="mail" required><span class="barra"></span>
+                    <input type="email" id="mail" class="input mail_input" name="mail" required><span class="barra"></span>
                     <label for="mail">Mail</label>
                     <p  class="text-error"><b>Ingresar email valido</b></p>
                 </div>
                 <div class="grupo" id="telefono">
-                    <input type="number" id="telefono" class="input" name="telefono" required><span class="barra"></span>
+                    <input type="number" id="telefono" class="input telefono_input" name="telefono" required><span class="barra"></span>
                     <label for="telefono">Telefono</label>
                     <p  class="text-error"><b>Ingresar solo numeros</b></p>
                 </div>
+                <button id="azar" type="button" onclick="rellenarFormulario()">Generar al Azar</button>
                 <button class="btn-enviar" type="submit">Enviar</button>
             </div>
         </form>
     </div>
 </body>
 <script type="text/javascript" src="../JS/script.js"></script>
+<script type="text/javascript" src="../JS/rellenarFormulario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </html>
