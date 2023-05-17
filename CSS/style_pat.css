@@ -205,8 +205,22 @@ section p{
     border: none;
     color: white;
 }
+/* se agrega para que las imagenes del carrusel se adapten a movil*/
 
+@media only screen and (max-width: 768px) {
 
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #imagen_carrusel {
+        width: -webkit-fill-available;
+        height: 35vh;
+    }
+}
 /* Lugares Populares */
 
 .articulo{
