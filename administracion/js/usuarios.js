@@ -137,7 +137,7 @@ function validarCookieDeSesion() {
     return cookie.trim().startsWith("sessionID=");
   });
 
-  // Verificar si se encontró la cookie de sesión y si su valor es "authorized"
+  // Verificar si se encontró la cookie de sesión y si su valor es "viajargCAC2023"
   if (sessionCookie && sessionCookie.split("=")[1].trim() === "viajargCAC2023") {
     return true;
   }
