@@ -109,7 +109,7 @@ createApp({
                         console.log("Exitoso")
                         document.cookie = "sessionID=viajargCAC2023; expires=Wed, 05 Jul 2023; path=/";
                         document.cookie = "usuario=" + usuarioEncontrado.username + "; expires=Wed, 05 Jul 2023; path=/";
-                        window.location.href = '/index.html'
+                        window.location.href = '/Viajarg'
                     }
                     else{
                         alert("La contraseña ingresada no es correcta")
