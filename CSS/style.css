@@ -25,6 +25,36 @@ body {
     padding: 5px 10px;
 
 }
+#usuario_activo{
+    width: 100px;
+    position: absolute;
+    display: inline-block;
+    right: 90px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+#borrar_cookies{
+    position: absolute;
+    right: 50px;
+    color: rgb(255, 122, 122);
+    border: 1px solid rgb(255, 142, 142);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 47, 255, 0.942);
+    cursor: pointer;
+}
+
+#borrar_cookies:hover{
+    background-color: #fff;
+}
+
+
 
 .header .logo {
     cursor: pointer;
