@@ -1,0 +1,50 @@
+/* ESTILOS DEL HEADER DE TODAS LAS PANTALLAS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+header{
+    background-color: #0A56BD;
+}
+.navbar-brand{
+    padding: 0;
+}
+
+.navbar-collapse{
+    margin-left: 30px;
+}
+
+.img-logo{
+    height: 80px;
+    transform: scale(130%);
+}
+
+.nav-link {
+    color: #fff;
+}
+.nav-link:hover{
+    color: #C1E3F5;
+    transform: scale(110%);
+    transition: .7s all;
+}
+
+.nav-item{
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+#cerrar_sesion{
+    border: none;
+    outline: .5px solid #fff;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+}
+
+#cerrar_sesion:hover{
+    background-color: #fff;
+    color: rgb(255, 0, 0);
+    outline: 1px solid red;
+    transform: scale(115%);
+    transition: .5s all;
+}

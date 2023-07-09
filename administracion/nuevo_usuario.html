@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Producto Nuevo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/nuevo_usuario.css"> <!-- Link a los estilos del header -->
+    <link rel="stylesheet" href="css/header.css"> <!-- Liink a los estilos de la pantalla editar usuario-->
+</head>
+
+<body>
+    <header id="header">
+        <!-- header que es añadido en el archivo main.js -->
+    </header>
+    <main>
+        <div class="container" id="app">
+        <!-- FORMULARIO PARA AÑADIR LOS DATOS DEL NUEVO USUARIO -->
+        <form>    
+            <h1>Añadir Usuario</h1>
+            <div class=" mb-3">
+                <label for="name">Nombre</label>
+                <br>
+                <input type="text" name="name" id="nombre" v-model="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="username">Alias</label>
+            <br>
+            <input type="text" name="username" id="username" v-model="username" required>
+            <div v-if="usernameExiste" class="usernameRepetido">
+                    <p id="nombreExistente"><i class="fas fa-exclamation-circle fa-pulse"></i> El nombre de usuario ya existe.</p>                
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="mail">Email</label>
+            <br>
+            <input type="text" name="mail" id="mail" v-model="mail" required>
+            <div v-if="mailInvalido" class="mailInvalido">
+                <p id="errorMail"><i class="fas fa-exclamation-circle fa-pulse"></i> Ingrese un correo electronico válido.</p>            
+            </div>
+        </div>
+        <div class="mb-3">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" v-model="password" required>
+          </div>
+        <div class="contenedor_boton">
+            <button  type="button" class="btn btn-success" v-bind:disabled="!camposCompletos" v-on:click="add()">Agregar</button>
+        </div>
+        <!-- v-bind:disabled = Habilita el boton "Agregar" al rellenar los campos-->
+        </form>
+        </div>
+    </main>
+    <footer id="footer">
+        <!-- footer que es añadido en el archivo main.js -->
+    </footer>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <!-- Script para agregar el header y footer -->
+    <script src="js/main.js"></script>
+    <!-- Link de VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Script con los metodos en VUE -->
+    <script src="js/usuarios.js"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f3d9777f93.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

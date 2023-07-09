@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+.hide {
+	display: none;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#regresar{
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+
+#regresar > button{
+	border-radius: 20px;
+	background-color: #fff;
+	border: none;
+
+}
+
+#regresar > button > a{
+	text-decoration: none;
+	color: #0A56BD;
+	font-weight: 600;
+
+}
+
+#app{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+}
+.company__info{
+	background-color:#0A56BD;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color:#0A56BD;
+    padding: 10px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+form{
+	padding: 0 2em;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group > .row:last-child{
+    align-self: center;
+}
+
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: .5em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #0A56BD;
+	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	border-radius: 4px;
+}
+.btn{
+	transition: all .5s ease;
+	width: 100%;
+	border-radius: 30px;
+	color:#fff;
+	font-weight: 600;
+	background-color: #0A56BD;
+	margin-bottom: 1em;
+}
+.btn:hover, .btn:focus{
+	background-color: #fff;
+	color:#0A56BD;
+	outline: 1px solid #0A56BD;
+}
+
+.row_button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.row_button > button{
+	width: 150px;
+}
+
+.mailInvalido{
+	display: flex;
+	justify-content: center;
+}
+.mailInvalido > p, .usernameRepetido >p{
+	color: red;
+	margin: 0;
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    
+    <style>
+       
+      
+    </style>
+</head>
+<body>
+    <div id="regresar" >
+        <button><a href="/index.html"><i class="fa-solid fa-chevron-left"></i> REGRESAR</a></button>
+    </div>
+    <div id="app">
+        
+        <div class="container-fluid">
+            <div class="row main-content bg-success text-center">
+                <div class="col-md-4 text-center company__info">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                    <div class="container-fluid" id="login-container">
+                        <div class="row">
+                            <h2>Iniciar Sesión</h2>
+                        </div>
+                        <div class="row">
+                            <form control="" class="form-group">
+                                <div class="row">
+                                    <input type="text" name="username" id="username" class="form__input" v-model="usernameLogin" placeholder="Nombre de Usuario">
+                                </div>
+                                <div class="row">
+                                    <!-- <span class="fa fa-lock"></span> -->
+                                    <input type="password" name="password" id="password" class="form__input" v-model="passwordLogin" placeholder="Contraseña">
+                                </div>
+                                <div class="row row_button">
+                                    <button type="button" value="Submit" class="btn" v-on:click="iniciarSesion()">INICIAR SESIÓN</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <p>No tienes un usuario? <a href="#" id="register-link">Registrate aquí</a></p>
+                        </div>
+                    </div>
+                    <div class="container-fluid hide" id="register-container">
+                        <div class="row">
+                            <h2>Registro</h2>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input type="text" name="name" id="name" class="form__input" v-model="name" placeholder="Nombre">
+                            </div>
+                            <form control="" class="form-group">
+                                
+                                <div class="row">
+                                    <div class="row">
+                                    <input type="text" name="username" id="username" class="form__input" v-model="username" placeholder="Nombre de Usuario">
+                                        <div v-if="usernameExiste" class="usernameRepetido">
+                                            <p id="nombreExistente"><i class="fas fa-exclamation-circle fa-pulse"></i> El nombre de usuario ya existe.</p>                
+                                        </div>
+                                </div>
+                                <div class="row">
+                                    <input type="email" name="email" id="email" class="form__input" v-model="mail" placeholder="Correo Electronico">
+                                    <div v-if="mailInvalido" class="mailInvalido">
+                                        <p id="errorMail"><i class="fas fa-exclamation-circle fa-pulse"></i> Ingrese un correo electronico válido.</p>            
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="password" name="password" id="password" class="form__input" v-model="password" placeholder="Contraseña">
+                                </div>
+                                <div class="row row_button">
+                                    <button type="button" value="Submit" class="btn"  v-on:click="add()">REGISTRAR</button>
+                                </div>
+                                <div class="row">
+                                    <p>Ya tienes una cuenta? <a href="#" id="login-link">Inicia sesión</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="https://kit.fontawesome.com/f3d9777f93.js" crossorigin="anonymous"></script>
+    <script>
+        // Obtener referencia al enlace "Register Here"
+        var registerLink = document.getElementById('register-link');
+        
+        // Obtener referencia al enlace "Login Here" en el formulario de registro
+        var loginLink = document.getElementById('login-link');
+
+        // Obtener referencia a los contenedores de inicio de sesión y registro
+        var loginContainer = document.getElementById('login-container');
+        var registerContainer = document.getElementById('register-container');
+
+        // Agregar un evento de clic al enlace "Register Here"
+        registerLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el enlace cambie de página
+
+            // Ocultar el contenedor de inicio de sesión y mostrar el contenedor de registro
+            loginContainer.classList.add('hide');
+            registerContainer.classList.remove('hide');
+        });
+
+        // Agregar un evento de clic al enlace "Login Here" en el formulario de registro
+        loginLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar que el enlace cambie de página
+
+            // Ocultar el contenedor de registro y mostrar el contenedor de inicio de sesión
+            registerContainer.classList.add('hide');
+            loginContainer.classList.remove('hide');
+        });
+    </script>
+</body>
+</html>

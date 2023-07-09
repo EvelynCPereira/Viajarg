@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+  </head>
+  <body>
+    <header id="header">
+      <!-- header que es añadido en el archivo main.js -->
+    </header>
+    <main>
+      <div id="app" class="container">
+        <br>
+        <h1 class="text-center">Lista de Usuarios</h1>
+        <br>
+
+        <div v-if="error">
+        
+        </div>
+        <div v-else>
+          <section v-if="cargando">
+            <div class="loader">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <div class="bar4"></div>
+              <div class="bar5"></div>
+              <div class="bar6"></div>
+            </div>
+            <p id="texto_cargando">Cargando...</p>
+          </section>
+          <section v-else>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Nombre de Usuario</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contraseña</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="" v-for="usuario in usuarios">
+                    <td scope="row">{{usuario.id}}</td>
+                    <td>{{usuario.name}}</td>
+                    <td>{{usuario.username}}</td>
+                    <td>{{usuario.mail}}</td>
+                    <td>{{usuario.password}}</td>
+                    <td class="text-center">
+                      <a
+                        class="btn btn-primary"
+                        :href="'editar.html?id='+ usuario.id"
+                        >Editar</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        v-on:click="remove(usuario.id)"
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <!-- footer que es añadido en el archivo main.js -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script>
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    </script>
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script para agregar el header y footer -->
+    <script src="js/main.js"></script>
+    <!-- Link de VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Script con los metodos en VUE -->
+    <script src="js/usuarios.js"></script>
+        <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f3d9777f93.js" crossorigin="anonymous"></script>
+  </body>
+</html>
