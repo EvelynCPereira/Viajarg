@@ -53,7 +53,14 @@ createApp({
             if (!this.name || !this.username || !this.mail || !this.password) {
               // Detener el envío del formulario si los campos obligatorios están vacíos
               
-              alert('Por favor, completa todos los campos');
+              Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Por favor completa todos los campos',
+                showConfirmButton: false,
+                timer: 2400,
+                timerProgressBar: true
+              });
               
               return;
             }
@@ -92,12 +99,26 @@ createApp({
             };
               fetch(this.url, options)
                 .then(function () {
-                  alert("Registro grabado");
+                  Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Registro Exitoso',
+                    showConfirmButton: false,
+                    timer: 2400,
+                    timerProgressBar: true
+                  });
                   window.location.href = "./usuarios.html";
                 })
                 .catch((err) => {
                   console.error(err);
-                  alert("Error al Grabar");
+                  Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Error al Grabar',
+                    showConfirmButton: false,
+                    timer: 2400,
+                    timerProgressBar: true
+                  });
                 });
             
           },
@@ -112,7 +133,14 @@ createApp({
                         window.location.href = '/Viajarg'
                     }
                     else{
-                        alert("La contraseña ingresada no es correcta")
+                      Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'La contraseña ingresada no es correcta',
+                        showConfirmButton: false,
+                        timer: 2400,
+                        timerProgressBar: true
+                      });
                     }
                 }else{
                     return;
@@ -123,7 +151,14 @@ createApp({
               window.location.href = './usuarios.html';
           }
             else{
-                alert("El usuario ingresado no se encuentra registrado")
+              Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'El usuario ingresado no se encuentra registrado',
+                showConfirmButton: false,
+                timer: 2400,
+                timerProgressBar: true
+              });
                 return;
             }
           },

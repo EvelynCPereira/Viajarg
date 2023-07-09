@@ -103,12 +103,26 @@ createApp({
       };
         fetch(this.url, options)
           .then(function () {
-            alert("Registro grabado");
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Registro grabado con exito',
+              showConfirmButton: false,
+              timer: 2400,
+              timerProgressBar: true
+            });
             window.location.href = "./usuarios.html";
           })
           .catch((err) => {
             console.error(err);
-            alert("Error al Grabar");
+            Swal.fire({
+              position: 'center',
+              icon: 'error',
+              title: 'Error al grabar',
+              showConfirmButton: false,
+              timer: 2400,
+              timerProgressBar: true
+            });
           });
       
     },

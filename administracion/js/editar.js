@@ -53,12 +53,26 @@ createApp({
       };
       fetch(this.url, options)
         .then(function () {
-          alert("Registro modificado");
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Registro modificado con exito',
+            showConfirmButton: false,
+            timer: 2400,
+            timerProgressBar: true
+          });
           window.location.href = "./usuarios.html";
         })
         .catch((err) => {
           console.error(err);
-          alert("Error al Modificar");
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Error al modificar',
+            showConfirmButton: false,
+            timer: 2400,
+            timerProgressBar: true
+          });
         });
     },
   },
