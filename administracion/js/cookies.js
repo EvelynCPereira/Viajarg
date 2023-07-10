@@ -136,7 +136,7 @@ createApp({
                       Swal.fire({
                         position: 'center',
                         icon: 'error',
-                        title: 'La contraseña ingresada no es correcta',
+                        title: 'Contraseña incorrecta',
                         showConfirmButton: false,
                         timer: 2400,
                         timerProgressBar: true
