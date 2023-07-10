@@ -109,7 +109,7 @@ createApp({
                   });
                   setTimeout(function () {
                     window.location.href = "./usuarios.html";
-                  }, 2600);
+                  }, 2800);
                 })
                 .catch((err) => {
                   console.error(err);
