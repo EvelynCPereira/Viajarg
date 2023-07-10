@@ -107,7 +107,9 @@ createApp({
                     timer: 2400,
                     timerProgressBar: true
                   });
-                  window.location.href = "./usuarios.html";
+                  setTimeout(function () {
+                    window.location.href = "./usuarios.html";
+                  }, 2600);
                 })
                 .catch((err) => {
                   console.error(err);
