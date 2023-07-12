@@ -35,9 +35,7 @@ createApp({
           this.error = true;
         });
     },
-    togglePasswordVisibility() {
-      this.showPassword = !this.showPassword;
-    },
+
     modificar() {
       let usuario = {
         name: this.name,
