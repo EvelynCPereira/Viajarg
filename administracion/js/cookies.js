@@ -38,6 +38,7 @@ createApp({
             console.log(this.usuarios)
 
           },
+        // VERIFICA SI EL NOMBRE DE USUARIO INGRESADO SE ENCUENTRA REGISTRADO
           usernameRepetido(username){
             return this.usuarios.some((usuario) => usuario.username === username)
           },
@@ -126,7 +127,7 @@ createApp({
           },
           iniciarSesion() {
             const usuarioEncontrado = this.usuarios.find((usuario) => usuario.username === this.usernameLogin);
-            if(usuarioEncontrado){
+            if(usuarioEncontrado){ //EN CASO DE ESTAR REGISTRADO SE VERIFICA SI LA CONTRASEÑA ES CORRECTA
                 if(this.passwordLogin!==""){
                     if(usuarioEncontrado.password === this.passwordLogin){
                         console.log("Exitoso")
@@ -148,7 +149,7 @@ createApp({
                     return;
                 }
             
-            }else if(this.usernameLogin === "$admin" && this.passwordLogin === "$admin"){
+            }else if(this.usernameLogin === "$admin" && this.passwordLogin === "$admin"){ // COMBINACIÓN PARA ACCEDER AL CRUD
               document.cookie = "sessionID=viajargCAC2023; expires=Wed, 05 Jul 2023; path=/";
               window.location.href = './usuarios.html';
           }
