@@ -30,6 +30,7 @@
         
         </div>
         <div v-else>
+          <!-- ANIMACIÓN "CARGANDO" -->
           <section v-if="cargando">
             <div class="loader">
               <div class="bar1"></div>
@@ -42,6 +43,7 @@
             <p id="texto_cargando">Cargando...</p>
           </section>
           <section v-else>
+            <!-- DIBUJA LA TABLA -->
             <div class="table-responsive">
               <table class="table table-bordered">
                 <thead>
@@ -55,6 +57,7 @@
                   </tr>
                 </thead>
                 <tbody>
+              <!-- INSERTA LOS DATOS EN LA TABLA  -->
                   <tr class="" v-for="usuario in usuarios">
                     <td scope="row">{{usuario.id}}</td>
                     <td>{{usuario.name}}</td>
